@@ -1,44 +1,80 @@
-.App {
+.container {
+  border: 2px black solid;
+  width: 20em;
+  /* height: 500px; */
+  margin: 0 auto;
+  margin-top: 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0px 40px rgba(0, 0, 0, 0.09);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 26px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn-container {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  justify-content: space-evenly;
 }
 
 .btn {
-  padding: 1em;
+  font-size: 20px;
+  width: 100px;
+  height: 40px;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: #3a86ff;
+  box-shadow: 0 5px #4433ff;
+}
+.btn:hover {
+  box-shadow: 0 3px #4433ff;
+  top: 1px;
+}
+.btn:active {
+  box-shadow: 0 0 #4433ff;
+  top: 5px;
+}
+
+.error {
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+.error:hover {
+  box-shadow: none;
+  background-color: red;
+}
+
+.error:active {
+  box-shadow: none;
+  background-color: red;
+  animation: shake 0.2s ease-in-out 0s 2;
+  box-shadow: 0 0 0.5em red;
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0rem;
+  }
+  25% {
+    margin-left: 0.5rem;
+  }
+  75% {
+    margin-left: -0.5rem;
+  }
+  100% {
+    margin-left: 0rem;
+  }
 }
 
 .counter {
@@ -46,4 +82,10 @@
   border-radius: 5px;
   width: 50px;
   text-align: center;
+  margin: 20px auto;
+}
+
+.refresh {
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
